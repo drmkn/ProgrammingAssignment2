@@ -1,4 +1,3 @@
-
 ## The following functions compute the inverse of a matrix. In order to make
 ## computations faster the functions avoid repeated calculation of inverse 
 ## for the same matrix and instead of that it caches the inverse.
@@ -6,12 +5,12 @@
 ## The following function creates a special type of matrix that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
-  z <- NULL
+  z <- NULL ## intialising z
   ## z corresponds to the inverse of matrix x 
   set <- function(y){
     x <<- y
     z <<- NULL
-  } ## Function 'set' resets the matrix x and its inverse. 
+  } ## Function 'set' resets the matrix x to matrix y and set its inverse to NULL. 
   get <- function() x
   setinverse <- function(inverse) z <<- inverse
   getinverse <- function() z
